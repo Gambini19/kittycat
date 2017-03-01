@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kittycat</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyCB2hcmSz7IY-2ecWYZTQ4gNpKXb_7qEEE</string>
+    <string name="catname">CatName</string>
+    <string name="breed">breed</string>
+    <string name="descriptioncat">descriptionCat</string>
+    <string name="title_activity_test">test</string>
+</resources>
