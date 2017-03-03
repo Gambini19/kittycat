@@ -41,7 +41,7 @@ public class Cat {
       public static void createCat()
     {
         ArrayList<Cat> catList = new ArrayList<>();
-        catList.add(new Cat("Murka", "Pers", 39.00, -77.00, "89655542233", "developer.alexanderklimov.ru/images/cat_bottom.png", "small kitty1"));
+        catList.add(new Cat("Murka", "Pers", 39.00, -77.00, "000000000", "developer.alexanderklimov.ru/images/cat_bottom.png", "small kitty1"));
         catList.add(new Cat("Kitty", "scotish", 38.86, -77.153, "000000000", "http://www.fonstola.ru/mini/201510/209342.jpg", "small kitty2"));
         catList.add(new Cat("Luis", "Russian", 38.83, -76.98, "000000000", "http://www.setwalls.ru/min/201409/72348.jpg", "small kitty3"));
         catList.add(new Cat("Tom", "Dvorovaya", 38.90, -76.88, "000000000", "http://rabstol.ru/ts/animals/1438169907.jpg", "small kitty4"));

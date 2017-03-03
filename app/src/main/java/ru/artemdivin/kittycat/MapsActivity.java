@@ -57,7 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             do{
                 Cat cat = Cat.fromCursor(cursor);
                 LatLng catCoordinate =new LatLng(cat.coordinatesLng,cat.coordinatesLat);
-                mMap.addMarker(new MarkerOptions().position(catCoordinate).title(cat.catName));
+                mMap.addMarker(new MarkerOptions().position(catCoordinate));
 
             }
             while(cursor.moveToNext());
@@ -70,13 +70,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.zoomTo(10));
 
 
-        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
-            public void onInfoWindowClick(Marker marker) {
+            public boolean onMarkerClick(Marker marker) {
                 String titleID = marker.getTitle();
                 Intent intent = new Intent(MapsActivity.this, CatActivity.class);
                 intent.putExtra("titleId", titleID  );
                 startActivity(intent);
+                return true;
             }
         });
     }

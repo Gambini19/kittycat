@@ -36,8 +36,6 @@ public class CatActivity extends AppCompatActivity {
         intent = getIntent();
         titleId = intent.getStringExtra("titleId");
 
-        Cat.loadCatData();
-
         Cursor cursor = App.dbHelper
                 .getReadableDatabase()
                 .rawQuery("SELECT * FROM mytable WHERE catname LIKE ? ", new String[]{titleId});
@@ -57,6 +55,7 @@ public class CatActivity extends AppCompatActivity {
                     .placeholder(R.drawable.common_full_open_on_phone)
                     .error(R.drawable.common_full_open_on_phone)
                     .into(imageView);
+
 
             callPhoneButton.setOnClickListener(new View.OnClickListener() {
                 @Override
