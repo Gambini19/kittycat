@@ -4,6 +4,7 @@ package ru.artemdivin.kittycat;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by Администратор on 27.02.2017.
@@ -26,6 +27,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+        Log.i("myDB", "Created");
         db.execSQL("create table mytable ("
                 + "id integer primary key autoincrement,"
                 + "catname text,"
@@ -34,7 +37,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 + "ltd real,"
                 + "description text,"
                 + "photoURL text,"
-                + "telephoneNumber int" + ");");
+                + "telephoneNumber text" + ");");
     }
 
     @Override
